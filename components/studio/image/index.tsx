@@ -51,7 +51,7 @@ export default function ImageOptions() {
       <Accordion
         type="single"
         collapsible
-        defaultValue={accordionOpen.shadowOpen ? 'shadow' : ''}
+        defaultValue={accordionOpen.shadowOpen ? 'shadow-sm' : ''}
         className="mt-2 w-full"
       >
         <AccordionItem value="shadow">

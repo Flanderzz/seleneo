@@ -51,8 +51,8 @@ export function ImageGallery({ images, currentUserId, title, description }: Imag
                     className="flex gap-[6px]"
                     columnClassName="flex flex-col gap-[2px] bg-background"
                 >
-                    <div className="relative bg-gradient-to-br from-primary/25 to-background rounded-lg p-8 flex flex-col justify-center border shadow-lg border-primary/20 mb-1">
-                        <h1 className="text-4xl font-bold tracking-tight mb-4 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
+                    <div className="relative bg-linear-to-br from-primary/25 to-background rounded-lg p-8 flex flex-col justify-center border shadow-lg border-primary/20 mb-1">
+                        <h1 className="text-4xl font-bold tracking-tight mb-4 bg-linear-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
                             {title}
                         </h1>
                         <p className="text-muted-foreground text-base">
@@ -76,7 +76,7 @@ export function ImageGallery({ images, currentUserId, title, description }: Imag
                     {images.map((image, index) => (
                         <div
                             key={image.id}
-                            className="relative cursor-pointer outline-none group"
+                            className="relative cursor-pointer outline-hidden group"
                             onClick={() => setSelectedIndex(index)}
                             tabIndex={0}
                             role="button"
@@ -88,7 +88,7 @@ export function ImageGallery({ images, currentUserId, title, description }: Imag
                                 className="w-full object-cover rounded-sm"
                                 draggable={false}
                             />
-                            <div className="absolute inset-0 rounded-sm bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="absolute inset-0 rounded-sm bg-linear-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div className="absolute bottom-4 left-4 right-4">
                                     <div className="flex items-center gap-2">
                                         <Avatar className="h-8 w-8">
@@ -238,7 +238,7 @@ export default function ImageViewer({ images, selectedIndex, setSelectedIndex }:
                         </div>
 
                         <div className="mt-4 flex items-center gap-3">
-                            <Link href={`/${selectedImage.user.name}/profile`} className="outline-none">
+                            <Link href={`/${selectedImage.user.name}/profile`} className="outline-hidden">
                                 <Avatar className="h-8 w-8">
                                     <AvatarImage src={selectedImage.user.image ?? ""} />
                                     <AvatarFallback>
@@ -249,7 +249,7 @@ export default function ImageViewer({ images, selectedIndex, setSelectedIndex }:
                             <div>
                                 <Link
                                     href={`/${encodeURIComponent(selectedImage.user.name ?? "")}/profile`}
-                                    className="text-sm font-medium text-white hover:underline outline-none"
+                                    className="text-sm font-medium text-white hover:underline outline-hidden"
                                 >
                                     {selectedImage.user.name}
                                 </Link>

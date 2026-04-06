@@ -54,7 +54,7 @@ export function ProductShowcase() {
                         {screenshots.map((item, index) => (
                             <motion.div
                                 key={index}
-                                className={`p-6 rounded-xl cursor-pointer transition-all backdrop-blur-sm border border-border/60 bg-background/50 border-opacity-10
+                                className={`p-6 rounded-xl cursor-pointer transition-all backdrop-blur-xs border border-border/60 bg-background/50 border-opacity-10
                                     ${selected === index
                                         ? 'bg-primary/10 shadow-lg'
                                         : 'hover:bg-muted/50'

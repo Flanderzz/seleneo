@@ -3,7 +3,7 @@ import { FeatureGrid } from './grid';
 
 export function Features() {
     return (
-        <section id="features" className="relative container mx-auto px-4 pt-[5rem] mb-12">
+        <section id="features" className="relative container mx-auto px-4 pt-20 mb-12">
             <div className="flex flex-col text-center rounded-md gap-4 items-center">
                 <div>
                     <Badge className='py-1 rounded-2xl px-4 text-lg bg-primary/70'>Features</Badge>

@@ -31,7 +31,7 @@ interface AlternateFeatureCardProps {
 
 export const FeatureCardAlternate = ({ title, description, icon }: AlternateFeatureCardProps) => {
     return (
-        <div className="flex flex-col gap-5 border border-white border-opacity-10 p-4 bg-white dark:bg-background/20 rounded-xl shadow-xl border-gray-200/50 dark:border-gray-700/50 backdrop-blur-xl w-full max-w-[15rem] min-h-[15rem] justify-center">
+        <div className="flex flex-col gap-5 border border-white border-opacity-10 p-4 bg-white dark:bg-background/20 rounded-xl shadow-xl border-gray-200/50 dark:border-gray-700/50 backdrop-blur-xl w-full max-w-60 min-h-60 justify-center">
             <div className="p-4 bg-primary w-fit flex items-center justify-center rounded-md border-t border-t-white border-opacity-10 border-r border-r-white">
                 {icon}
             </div>

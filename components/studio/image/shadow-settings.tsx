@@ -128,7 +128,7 @@ export default function ShadowSettings() {
                             }}
                             className={`flex-center relative h-20 w-24 cursor-pointer rounded-md ${shadow.shadow ===
                                 images.find(img => img.id === selectedImage)?.style.imageShadow &&
-                                'outline-none ring-2 ring-ring ring-offset-2'
+                                'outline-hidden ring-2 ring-ring ring-offset-2'
                                 }`}
                             style={backgroundStyle}
                         >
