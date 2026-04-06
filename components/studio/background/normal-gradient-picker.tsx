@@ -185,7 +185,7 @@ export default function NormalGradientPicker() {
                             side="right"
                             sideOffset={10}
                             align="center"
-                            className="max-w-60"
+                            className="max-w-[15rem]"
                             style={{
                                 display: selectedImage ? 'none' : 'block',
                             }}
@@ -198,15 +198,15 @@ export default function NormalGradientPicker() {
 
             {selectedImage && images.find(img => img.id === selectedImage)?.linearGradients && (
                 <>
-                    <div className="mt-4 flex grid-cols-7 flex-wrap gap-2 md:grid">
+                    <div className="mt-4 flex grid-cols-7 flex-wrap gap-[0.5rem] md:grid">
                         {images.find(img => img.id === selectedImage)?.linearGradients?.map(
                             (gradient: string) => (
                                 <Button
                                     key={gradient}
                                     variant="secondary"
-                                    className={`aspect-square h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-px ${gradient === backgroundInStore &&
+                                    className={`aspect-square h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-[1px] ${gradient === backgroundInStore &&
                                         !imageBackground &&
-                                        'outline-hidden ring-2 ring-ring ring-offset-2'
+                                        'outline-none ring-2 ring-ring ring-offset-2'
                                         }`}
                                     onClick={() =>
                                         handleGradientClick(
@@ -231,7 +231,7 @@ export default function NormalGradientPicker() {
                                                         size={20}
                                                     />
                                                 </PopoverTrigger>
-                                                <PopoverContent className="flex w-48 flex-col items-center gap-3">
+                                                <PopoverContent className="flex w-[12rem] flex-col items-center gap-3">
                                                     <h1 className="text-[0.85rem]">Gradient Angle</h1>
                                                     <div className={`circular-slider`}>
                                                         <CircularSliderComp />
@@ -248,9 +248,9 @@ export default function NormalGradientPicker() {
                                 <Button
                                     key={gradient}
                                     variant="secondary"
-                                    className={`aspect-square h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-px ${gradient === backgroundInStore &&
+                                    className={`aspect-square h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-[1px] ${gradient === backgroundInStore &&
                                         !imageBackground &&
-                                        'outline-hidden ring-2 ring-ring ring-offset-2'
+                                        'outline-none ring-2 ring-ring ring-offset-2'
                                         }`}
                                     onClick={() =>
                                         handleGradientClick(
@@ -275,7 +275,7 @@ export default function NormalGradientPicker() {
                                                         size={20}
                                                     />
                                                 </PopoverTrigger>
-                                                <PopoverContent className="flex w-48 flex-col items-center gap-3">
+                                                <PopoverContent className="flex w-[12rem] flex-col items-center gap-3">
                                                     <h1 className="text-[0.85rem]">Gradient Angle</h1>
                                                     <div className={`circular-slider`}>
                                                         <CircularSliderComp />
@@ -292,9 +292,9 @@ export default function NormalGradientPicker() {
                                 <Button
                                     key={gradient}
                                     variant="secondary"
-                                    className={`aspect-square h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-px ${gradient === backgroundInStore &&
+                                    className={`aspect-square h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-[1px] ${gradient === backgroundInStore &&
                                         !imageBackground &&
-                                        'outline-hidden ring-2 ring-ring ring-offset-2'
+                                        'outline-none ring-2 ring-ring ring-offset-2'
                                         }`}
                                     onClick={() =>
                                         handleGradientClick(
@@ -319,7 +319,7 @@ export default function NormalGradientPicker() {
                                                         size={20}
                                                     />
                                                 </PopoverTrigger>
-                                                <PopoverContent className="flex w-48 flex-col items-center gap-3">
+                                                <PopoverContent className="flex w-[12rem] flex-col items-center gap-3">
                                                     <h1 className="text-[0.85rem]">Gradient Angle</h1>
                                                     <div className={`circular-slider`}>
                                                         <CircularSliderComp />
@@ -345,14 +345,14 @@ export default function NormalGradientPicker() {
                 <span>Gradients</span>
             </h3>
 
-            <div className="mt-4 w-full flex grid-cols-7 flex-wrap gap-2 md:grid">
+            <div className="mt-4 w-full flex grid-cols-7 flex-wrap gap-[0.5rem] md:grid">
                 {gradients.map(({ gradient, background, type }: Gradient) => (
                     <Button
                         key={gradient}
                         variant="secondary"
-                        className={`h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-px ${gradient === backgroundInStore &&
+                        className={`h-[1.85rem] w-[1.85rem] overflow-hidden rounded-md p-[1px] ${gradient === backgroundInStore &&
                             !imageBackground &&
-                            'outline-hidden ring-2 ring-ring ring-offset-2'
+                            'outline-none ring-2 ring-ring ring-offset-2'
                             }`}
                         onClick={() =>
                             handleGradientClick(
@@ -377,7 +377,7 @@ export default function NormalGradientPicker() {
                                     <PopoverTrigger asChild>
                                         <Settings2 className="flex-center" color="#333" size={20} />
                                     </PopoverTrigger>
-                                    <PopoverContent className="flex w-48 flex-col items-center gap-3">
+                                    <PopoverContent className="flex w-[12rem] flex-col items-center gap-3">
                                         <h1 className="text-[0.85rem]">Gradient Angle</h1>
                                         <div className={`circular-slider`}>
                                             <CircularSliderComp />

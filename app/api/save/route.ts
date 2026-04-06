@@ -100,7 +100,7 @@ async function uploadImageToCloudflare(file: FormData, userId: string, viz: "PUB
         }
 
         const processedFormData = new FormData();
-        processedFormData.append("file", new Blob([new Uint8Array(fileBuffer)]), `image.${fileType.toLowerCase()}`);
+        processedFormData.append("file", new Blob([fileBuffer]), `image.${fileType.toLowerCase()}`);
         processedFormData.append("requireSignedURLs", "false");
 
         const response = await fetch(

@@ -36,10 +36,10 @@ const FrameButtons = ({
     <div
       className={`mr-2 flex basis-[6%] ${
         frameHeight === 'small'
-          ? 'gap-[0.6vw] *:h-[0.7vw] *:w-[0.7vw]'
+          ? 'gap-[0.6vw] [&>*]:h-[0.7vw] [&>*]:w-[0.7vw]'
           : frameHeight === 'medium'
-          ? 'gap-[0.65vw] *:h-[0.8vw] *:w-[0.8vw]'
-          : 'gap-[0.7vw] *:h-[0.9vw] *:w-[0.9vw]'
+          ? 'gap-[0.65vw] [&>*]:h-[0.8vw] [&>*]:w-[0.8vw]'
+          : 'gap-[0.7vw] [&>*]:h-[0.9vw] [&>*]:w-[0.9vw]'
       }`}
     >
       {colors.map((color, index) => (
@@ -53,7 +53,7 @@ const FrameSearchBar = ({ frame }: { frame: FrameTypes }) => (
   <div
     className={cn(
       'flex h-[50%] w-full flex-1 items-center rounded-md px-2 opacity-5',
-      frame === 'MacOS Dark' ? 'bg-gray-200' : 'bg-black'
+      frame === 'MacOS Dark' ? 'bg-gray-200' : 'bg-[#000]'
     )}
   />
 )

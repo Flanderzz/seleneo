@@ -65,7 +65,7 @@ export default function FramePicker() {
                     }}
                 >
                     <div className="flex h-full w-full flex-col justify-center overflow-hidden rounded-sm">
-                        <div className="flex w-full basis-[30%] bg-[#454545] shadow-xs">
+                        <div className="flex w-full basis-[30%] bg-[#454545] shadow-sm">
                             <div className={`flex-center basis-[50%] gap-0.5 `}>
                                 <div className="h-1 w-1 rounded-full bg-[#f7645ccc]" />
                                 <div className="h-1 w-1 rounded-full bg-[#fbc341d2]" />
@@ -83,7 +83,7 @@ export default function FramePicker() {
                     }}
                 >
                     <div className="flex h-full w-full flex-col justify-center overflow-hidden rounded-sm">
-                        <div className="flex w-full basis-[30%] bg-[#E3E2E3] shadow-xs">
+                        <div className="flex w-full basis-[30%] bg-[#E3E2E3] shadow-sm">
                             <div className={`flex-center basis-[50%] gap-0.5 `}>
                                 <div className="h-1 w-1 rounded-full bg-[#f7645ccc]" />
                                 <div className="h-1 w-1 rounded-full bg-[#fbc341d2]" />
@@ -100,8 +100,8 @@ export default function FramePicker() {
                         frameChangeHandler('Arc')
                     }}
                 >
-                    <div className="flex-center h-18 w-24 flex-col rounded-sm border border-white/20 bg-white/20 p-1 shadow-xl">
-                        <div className="h-full w-full rounded-[2px] bg-primary shadow-xs" />
+                    <div className="flex-center h-[4.5rem] w-24 flex-col rounded-sm border border-[#fff]/20 bg-[#fff]/20 p-1 shadow-xl">
+                        <div className="h-full w-full rounded-[2px] bg-primary shadow-sm" />
                     </div>
                 </FrameContainer>
 
@@ -112,7 +112,7 @@ export default function FramePicker() {
                     }}
                     className="translate-y-2"
                 >
-                    <div className="flex-center h-18 w-24 flex-col rounded-sm">
+                    <div className="flex-center h-[4.5rem] w-24 flex-col rounded-sm">
                         <div className="h-full w-full rounded-[2px] bg-primary/80" />
                     </div>
                 </FrameContainer>
@@ -130,10 +130,10 @@ export default function FramePicker() {
                             defaultValue={frameHeight}
                             onValueChange={(value) => setFrameHeight(value)}
                         >
-                            <SelectTrigger className="w-28 border border-primary/30">
+                            <SelectTrigger className="w-[7rem] border border-primary/30">
                                 <SelectValue placeholder="Medium" />
                             </SelectTrigger>
-                            <SelectContent className="w-28">
+                            <SelectContent className="w-[7rem]">
                                 <SelectItem value="small">Small</SelectItem>
                                 <SelectItem value="medium">Medium</SelectItem>
                                 <SelectItem value="large">Large</SelectItem>
@@ -163,7 +163,7 @@ export function FrameContainer({
         <div className={`${selectedImage ? '' : 'pointer-events-none opacity-40'}`}>
             <button
                 onClick={onClick}
-                className={`relative h-[3.55rem] w-[4.6rem] overflow-hidden whitespace-nowrap rounded-lg border border-border/80 bg-gray-300 ring-offset-background transition-colors focus:z-10 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${selectedImage && images.find(img => img.id === selectedImage)?.frame === text
+                className={`relative h-[3.55rem] w-[4.6rem] overflow-hidden whitespace-nowrap rounded-lg border border-border/80 bg-gray-300 ring-offset-background transition-colors focus:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${selectedImage && images.find(img => img.id === selectedImage)?.frame === text
                     ? 'ring-2 ring-ring ring-offset-2'
                     : ''
                     }`}

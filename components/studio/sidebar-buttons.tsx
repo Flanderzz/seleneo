@@ -37,7 +37,7 @@ export default function SidebarButton({
       </Button>
       {text && (
         <span
-          className={`hidden max-w-13 truncate text-xs md:inline`}
+          className={`hidden max-w-[3.25rem] truncate text-xs md:inline`}
         >
           {text}
         </span>

@@ -71,11 +71,11 @@ export function Banner({
   if (!show) return null
 
   return (
-    <div className="relative isolate flex flex-col justify-between gap-3 overflow-hidden rounded-lg border border-green-600/15 bg-linear-to-r from-lime-100/80 to-emerald-100/80 py-3 pl-4 pr-12 sm:flex-row sm:items-center sm:py-2">
+    <div className="relative isolate flex flex-col justify-between gap-3 overflow-hidden rounded-lg border border-green-600/15 bg-gradient-to-r from-lime-100/80 to-emerald-100/80 py-3 pl-4 pr-12 sm:flex-row sm:items-center sm:py-2">
       <Grid
         cellSize={13}
         patternOffset={[0, -1]}
-        className="text-black/30 mix-blend-overlay mask-[linear-gradient(to_right,black,transparent)] md:mask-[linear-gradient(to_right,black_60%,transparent)]"
+        className="text-black/30 mix-blend-overlay [mask-image:linear-gradient(to_right,black,transparent)] md:[mask-image:linear-gradient(to_right,black_60%,transparent)]"
       />
 
       <div className="flex items-center gap-3">

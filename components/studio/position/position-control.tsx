@@ -88,7 +88,7 @@ export default function PositionControl() {
     return (
         <div className="w-full flex justify-center items-center">
             <div
-                className={`relative grid h-40 w-full grid-cols-3 overflow-hidden rounded-lg border bg-card *:cursor-pointer *:border-dashed *:border-border *:transition-colors ${selectedImage ? '' : 'pointer-events-none opacity-40'}`}
+                className={`relative grid h-40 w-full grid-cols-3 overflow-hidden rounded-lg border bg-card [&>*]:cursor-pointer [&>*]:border-dashed [&>*]:border-border [&>*]:transition-colors ${selectedImage ? '' : 'pointer-events-none opacity-40'}`}
             >
                 <button
                     className="flex items-center justify-center border-b-2 border-r-2 hover:bg-muted"

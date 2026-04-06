@@ -119,7 +119,7 @@ export default function ImageGradientPicker() {
                     (highResBackground
                       ? `${data.urls.full}`
                       : `${data.urls.regular}`) &&
-                  'outline-hidden ring-2 ring-ring ring-offset-2'
+                  'outline-none ring-2 ring-ring ring-offset-2'
                 }`}
                 onClick={() => {
                   setBackgroundType('gradient')
@@ -160,7 +160,7 @@ export default function ImageGradientPicker() {
             setCurrentPage((prevPage) => prevPage - 1)
           }}
         >
-          <ChevronLeft size={16} className="mr-1 translate-y-px" />
+          <ChevronLeft size={16} className="mr-1 translate-y-[1px]" />
           <p>Back</p>
         </Button>
         <Button
@@ -172,7 +172,7 @@ export default function ImageGradientPicker() {
           }}
         >
           <p>Next</p>
-          <ChevronRight size={16} className="ml-1 translate-y-px" />
+          <ChevronRight size={16} className="ml-1 translate-y-[1px]" />
         </Button>
       </div>
     </>

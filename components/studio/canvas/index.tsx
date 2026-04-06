@@ -83,7 +83,7 @@ export default function CanvasOptions() {
                             <TooltipTrigger>
                                 <InfoIcon className="size-4 stroke-primary/70" />
                             </TooltipTrigger>
-                            <TooltipContent className="max-w-48">
+                            <TooltipContent className="max-w-[12rem]">
                                 <p>
                                     When enabled, the canvas will automatically resize to fit your
                                     image on upload.
@@ -166,7 +166,7 @@ export default function CanvasOptions() {
             <Separator className="mt-8 h-[0.1rem] w-full" />
 
             <h1 className="mb-3 mt-4 px-1 text-[0.85rem]">Preview Scale</h1>
-            <span className="inline-flex rounded-md shadow-xs space-x-4">
+            <span className="inline-flex rounded-md shadow-sm space-x-4">
                 <Button
                     variant={"outline"}
                     className='border border-primary/30'

@@ -92,7 +92,7 @@ export default function CustomGradientPicker() {
                 className={`aspect-square overflow-hidden rounded-sm p-0 ${
                   background === solidBackground &&
                   !imageBackground &&
-                  'outline-hidden ring-2 ring-ring ring-offset-2'
+                  'outline-none ring-2 ring-ring ring-offset-2'
                 }`}
                 onClick={() => handleColorChange(solidBackground)}
                 style={{ background: solidBackground }}
@@ -114,7 +114,7 @@ export default function CustomGradientPicker() {
                 className={`h-[2.56rem] w-[2.56rem] rounded-md ${
                   background === solidBackground &&
                   !imageBackground &&
-                  'outline-hidden ring-2 ring-ring ring-offset-2'
+                  'outline-none ring-2 ring-ring ring-offset-2'
                 }`}
                 onClick={() => handleColorChange(solidBackground)}
                 style={{ background: solidBackground }}

@@ -34,7 +34,7 @@ export default function SpotlightButton({
         transition: 'background 0.8s cubic-bezier(0.6, 0.6, 0, 1)',
       }}
     >
-      <div className="absolute inset-0 flex items-center @container">
+      <div className="absolute inset-0 flex items-center [container-type:inline-size]">
         <div className="absolute h-[100cqw] w-[100cqw] animate-spin bg-[conic-gradient(from_0_at_50%_50%,rgba(255,255,255,0.5)_0deg,transparent_60deg,transparent_300deg,rgba(255,255,255,0.5)_360deg)] opacity-100 transition duration-300  [animation-duration:3s]"></div>
       </div>
 
@@ -42,14 +42,14 @@ export default function SpotlightButton({
 
       <div className="absolute bottom-0 left-1/2  h-2/3 w-4/5 -translate-x-1/2 rounded-xl bg-white/10 opacity-100 blur-md transition-all duration-500"></div>
 
-      <span className="flex-center relative gap-2 bg-linear-to-b from-white/25  to-white bg-clip-text text-[0.95rem] font-semibold text-transparent transition-all duration-200 group">
+      <span className="flex-center relative gap-2 bg-gradient-to-b from-white/25  to-white bg-clip-text text-[0.95rem] font-semibold text-transparent transition-all duration-200 group">
         {text}
         <Star
           size={20}
           style={{
             transition: 'all 1s cubic-bezier(0.6, 0.6, 0, 1)',
           }}
-          className="stroke-2 text-yellow-400 group-hover:rotate-287 group-hover:fill-yellow-400"
+          className="stroke-[2] text-yellow-400 group-hover:rotate-[287deg] group-hover:fill-yellow-400"
         />
       </span>
     </As>

@@ -115,7 +115,7 @@ export const GitHubButton = () => {
                     className="flex items-center gap-2"
                 >
                     <GithubIcon isHovered={isHovered} />
-                    <span className="group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:via-blue-700 group-hover:to-blue-600 group-hover:bg-clip-text group-hover:text-transparent dark:group-hover:from-blue-300 dark:group-hover:via-blue-200 dark:group-hover:to-blue-300">
+                    <span className="group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:via-blue-700 group-hover:to-blue-600 group-hover:bg-clip-text group-hover:text-transparent dark:group-hover:from-blue-300 dark:group-hover:via-blue-200 dark:group-hover:to-blue-300">
                         Star Seleneo on GitHub
                     </span>
                 </Link>

@@ -57,7 +57,7 @@ const ListItem = React.forwardRef<
                 <a
                     ref={ref}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                         className
                     )}
                     {...props}
@@ -167,7 +167,7 @@ export function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-white/5 dark:bg-transparent backdrop-blur-md z-50 border-b border-primary/20 w-screen">
+        <nav className="fixed top-0 left-0 right-0 bg-white/5 dark:bg-transparent backdrop-blur-md z-50 border-b-[1px] border-primary/20 w-screen">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center gap-4">
@@ -188,7 +188,7 @@ export function Navbar() {
                                             <li className="row-span-3">
                                                 <NavigationMenuLink asChild>
                                                     <Link
-                                                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-linear-to-br from-primary/15 to-primary/5 dark:bg-linear-to-br dark:from-primary/30 dark:to-primary/5  p-6 no-underline outline-hidden focus:shadow-md"
+                                                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-br from-primary/15 to-primary/5 dark:bg-gradient-to-br dark:from-primary/30 dark:to-primary/5  p-6 no-underline outline-none focus:shadow-md"
                                                         href="/about"
                                                     >
                                                         <img src={icon.src} className="h-6 w-6" alt="Logo" loading="eager" />

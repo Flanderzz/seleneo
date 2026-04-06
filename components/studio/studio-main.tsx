@@ -242,7 +242,7 @@ export default function Canvas() {
         }, [onDismiss])
 
         return (
-            <div className="pointer-events-auto z-60 flex max-w-sm flex-col rounded-md border bg-background shadow-lg">
+            <div className="pointer-events-auto z-[60] flex max-w-sm flex-col rounded-md border bg-background shadow-lg">
                 <div className="h-1 w-full bg-muted/20 rounded-t-md">
                     <div
                         className="h-full bg-primary transition-all duration-75 ease-linear ml-auto"

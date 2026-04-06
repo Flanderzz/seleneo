@@ -1,7 +1,8 @@
 import { StudioNavbar } from "@/components/navigation/studio";
-import Canvas from "@/components/studio/canvas-loader";
 import { Sidebar } from "@/components/sidebar";
+import Spinner from "@/components/spinner/spinner";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 
 export const metadata: Metadata = {
     generator: 'Next.js Baby!',
@@ -47,6 +48,14 @@ export const metadata: Metadata = {
         type: 'website',
     },
 }
+
+const Canvas = dynamic(() => import('@/components/studio/studio-main'), {
+    ssr: false,
+    loading: () =>
+        <div className="flex-1 flex items-center justify-center h-full w-full">
+            <Spinner />
+        </div>
+})
 
 export default function StudioPage() {
     {/* Remember this select-none for the future if we dont like it */}

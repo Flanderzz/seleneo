@@ -30,7 +30,7 @@ export default function useTiptapEditor(initialContent: string = '') {
         content: initialContent,
         editorProps: {
             attributes: {
-                style: 'outline-solid: none; margin: 0; padding: 0; width: 100%; height: 100%; overflow: visible;'
+                style: 'outline: none; margin: 0; padding: 0; width: 100%; height: 100%; overflow: visible;'
             }
         }
     })

@@ -11,7 +11,7 @@ export default function HeroImage() {
 
     return (
         <div className="md:block relative">
-            <div className="absolute -inset-1 rounded-2xl bg-linear-to-r from-indigo-500 to-purple-600 dark:opacity-50 opacity-30 dark:blur-2xl blur-3xl" />
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 dark:opacity-50 opacity-30 dark:blur-2xl blur-3xl" />
             <div className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-200/50 dark:border-gray-700/50">
                 <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 flex items-center gap-2 overflow-x-auto">
                     <div className="flex gap-1.5">

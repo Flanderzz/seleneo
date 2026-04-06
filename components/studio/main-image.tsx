@@ -158,7 +158,7 @@ const ImageUpload = () => {
                             return (
                                 <ContextMenuImage key={image.id + index}>
                                     <div
-                                        className={`image image-check absolute z-2 flex-1 overflow-hidden ${isSelecting ? 'selectable' : ''
+                                        className={`image image-check absolute z-[2] flex-1 overflow-hidden ${isSelecting ? 'selectable' : ''
                                             } ${selectedImage ? '' : ''}`}
                                         ref={
                                             !isMultipleTargetSelected
@@ -494,7 +494,7 @@ function LoadAImage() {
                             <div className="flex-center mt-4 text-base leading-6 text-muted-foreground">
                                 <label
                                     htmlFor="file-upload"
-                                    className="relative cursor-pointer rounded-md font-bold text-primary focus-within:outline-hidden focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 hover:underline dark:hover:text-primary hover:text-primary"
+                                    className="relative cursor-pointer rounded-md font-bold text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 hover:underline dark:hover:text-primary hover:text-primary"
                                 >
                                     <span>Load an image</span>
                                 </label>
@@ -519,7 +519,7 @@ function LoadAImage() {
                             <div className='flex-center gap-4 scale-90'>
                                 <Button
                                     onClick={() => loadDemoImage('light')}
-                                    className="z-120 max-w-52 mt-4 hidden rounded-md bg-background/80 backdrop-blur-xs text-primary shadow-xs hover:bg-background/90 sm:inline-flex"
+                                    className="z-[120] max-w-52 mt-4 hidden rounded-md bg-background/80 backdrop-blur-sm text-primary shadow-sm hover:bg-background/90 sm:inline-flex"
                                     variant="outline"
                                 >
                                     Light mode demo
@@ -527,7 +527,7 @@ function LoadAImage() {
                                 </Button>
                                 <Button
                                     onClick={() => loadDemoImage('dark')}
-                                    className="z-120 max-w-52 mt-4 hidden rounded-md bg-background/80 backdrop-blur-xs text-primary shadow-xs hover:bg-background/90 sm:inline-flex"
+                                    className="z-[120] max-w-52 mt-4 hidden rounded-md bg-background/80 backdrop-blur-sm text-primary shadow-sm hover:bg-background/90 sm:inline-flex"
                                     variant="outline"
                                 >
                                     Dark mode demo

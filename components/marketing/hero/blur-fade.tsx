@@ -33,7 +33,7 @@ export function FadeIn({ children, delay = 0, className = '' }: FadeInProps) {
       className={`transition-all duration-1000 ${className} ${
         hasAnimated || isInView
           ? 'opacity-100 translate-y-0 blur-none'
-          : 'opacity-0 translate-y-8 blur-xs'
+          : 'opacity-0 translate-y-8 blur-sm'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >

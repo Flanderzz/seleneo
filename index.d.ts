@@ -3,8 +3,6 @@
  */
 type Maybe = null | undefined
 
-declare module '*.css'
-
 declare module 'rgbaster' {
     /**
      * Analyzes the colors in an image.
