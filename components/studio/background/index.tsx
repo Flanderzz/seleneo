@@ -25,7 +25,7 @@ export default function BackgroundOptions() {
           : 'gradientsTab'
       }
     >
-      <TabsList className="mb-4 bg-card border border-primary/30 shadow-sm [&>*]:px-[1rem]">
+      <TabsList className="mb-4 bg-card border border-primary/30 shadow-xs *:px-4">
         <TabsTrigger value="gradientsTab">Gradient</TabsTrigger>
         <TabsTrigger value="patternsTab">Wallpaper</TabsTrigger>
         <TabsTrigger className="hidden sm:flex" value="customTab">

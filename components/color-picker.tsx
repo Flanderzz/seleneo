@@ -46,7 +46,7 @@ export default function ColorPicker({
                             setColor(color)
                             onChange(color)
                         }}
-                        className="h-full w-full rounded-md border-[#22262b] bg-primary/10 px-3 py-3 text-center text-gray-100 focus:border-[#8e8ece] focus:outline-none focus:ring-1 focus:ring-[#8e8ece] md:text-sm"
+                        className="h-full w-full rounded-md border-[#22262b] bg-primary/10 px-3 py-3 text-center text-gray-100 focus:border-[#8e8ece] focus:outline-hidden focus:ring-1 focus:ring-[#8e8ece] md:text-sm"
                     />
                 </div>
             </div>

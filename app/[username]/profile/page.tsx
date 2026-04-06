@@ -117,9 +117,10 @@ export async function generateMetadata(
 
 }
 
-export default async function ProfilePage({ params }: { params: { username: string } }) {
+export default async function ProfilePage({ params }: { params: Promise<{ username: string }> }) {
+    const { username } = await params;
     const currentUser = await auth();
-    const profile = await getUser(params.username, currentUser?.user?.name === params.username);
+    const profile = await getUser(username, currentUser?.user?.name === username);
     const isOwnProfile = currentUser?.user && profile && currentUser.user?.id === profile.id;
 
     if (!profile) redirect("/404");
@@ -185,7 +186,7 @@ export default async function ProfilePage({ params }: { params: { username: stri
                                                                 className="object-cover w-full h-full transition-transform group-hover:scale-105"
                                                             />
                                                         </AspectRatio>
-                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                                        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                                                             <div className="absolute bottom-4 left-4">
                                                                 <p className="text-white/80 text-sm">
                                                                     {new Date(image.createdAt).toLocaleDateString()}

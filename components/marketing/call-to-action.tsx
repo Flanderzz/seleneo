@@ -43,11 +43,11 @@ export function CallToAction() {
                                         </Link>
                                     </Button>
 
-                                    <div className="w-[40rem] h-40 relative mt-4">
-                                        <div className="opacity-30 absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-                                        <div className="opacity-30 absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-                                        <div className="opacity-30 absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-                                        <div className="opacity-30 absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+                                    <div className="w-160 h-40 relative mt-4">
+                                        <div className="opacity-30 absolute inset-x-20 top-0 bg-linear-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-xs" />
+                                        <div className="opacity-30 absolute inset-x-20 top-0 bg-linear-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+                                        <div className="opacity-30 absolute inset-x-60 top-0 bg-linear-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-xs" />
+                                        <div className="opacity-30 absolute inset-x-60 top-0 bg-linear-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
                                         <SparklesCore
                                             background="transparent"
                                             minSize={0.4}
@@ -57,7 +57,7 @@ export function CallToAction() {
                                             particleColor={resolvedTheme === 'dark' ? '#fff' : '#2218de'}
                                         />
                                         {/* prevent weird ass edges */}
-                                        <div className="absolute inset-0 w-full h-full bg-background [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                                        <div className="absolute inset-0 w-full h-full bg-background mask-[radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ export function CallToAction() {
                         repeatDelay={1}
                         className={cn(
                             "-translate-y-40",
-                            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+                            "mask-[radial-gradient(500px_circle_at_center,white,transparent)]",
                             "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
                         )}
                     />

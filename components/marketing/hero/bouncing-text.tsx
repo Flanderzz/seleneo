@@ -8,17 +8,17 @@ import { useEffect, useRef, useState } from 'react';
 
 const getRandomColor = () => {
     const colors = [
-        'bg-gradient-to-r from-fuchsia-500 to-pink-500 dark:from-fuchsia-700 dark:to-pink-700', // synthwave
-        'bg-gradient-to-r from-green-600 to-green-700 dark:from-green-700 dark:to-green-800',   // green terminal
-        'bg-gradient-to-r from-blue-500 to-teal-500 dark:from-blue-600 dark:to-teal-600',       // ocean
-        'bg-gradient-to-r from-yellow-400 to-orange-500 dark:from-yellow-500 dark:to-orange-600'// sunset
+        'bg-linear-to-r from-fuchsia-500 to-pink-500 dark:from-fuchsia-700 dark:to-pink-700', // synthwave
+        'bg-linear-to-r from-green-600 to-green-700 dark:from-green-700 dark:to-green-800',   // green terminal
+        'bg-linear-to-r from-blue-500 to-teal-500 dark:from-blue-600 dark:to-teal-600',       // ocean
+        'bg-linear-to-r from-yellow-400 to-orange-500 dark:from-yellow-500 dark:to-orange-600'// sunset
     ];
 
     const bgToTextMap: Record<string, string> = {
-        'bg-gradient-to-r from-fuchsia-500 to-pink-500 dark:from-fuchsia-700 dark:to-pink-700': 'text-white',
-        'bg-gradient-to-r from-green-600 to-green-700 dark:from-green-700 dark:to-green-800': 'text-white',
-        'bg-gradient-to-r from-blue-500 to-teal-500 dark:from-blue-600 dark:to-teal-600': 'text-white',
-        'bg-gradient-to-r from-yellow-400 to-orange-500 dark:from-yellow-500 dark:to-orange-600': 'text-white'
+        'bg-linear-to-r from-fuchsia-500 to-pink-500 dark:from-fuchsia-700 dark:to-pink-700': 'text-white',
+        'bg-linear-to-r from-green-600 to-green-700 dark:from-green-700 dark:to-green-800': 'text-white',
+        'bg-linear-to-r from-blue-500 to-teal-500 dark:from-blue-600 dark:to-teal-600': 'text-white',
+        'bg-linear-to-r from-yellow-400 to-orange-500 dark:from-yellow-500 dark:to-orange-600': 'text-white'
     };
 
     const randomBgColor = colors[Math.floor(Math.random() * colors.length)];
@@ -45,7 +45,7 @@ export function BouncingText({ speed = 0.2, state }: BouncingTextProps) {
     const textRef = useRef<HTMLDivElement>(null);
     const controls = useAnimationControls();
     const [colors, setColors] = useState(getRandomColor());
-    const animationRef = useRef<number>();
+    const animationRef = useRef<number | undefined>(undefined);
     const positionRef = useRef({ x: 0, y: 0 });
     const velocityRef = useRef({ x: speed, y: speed });
     const lastCollisionRef = useRef(0);
@@ -189,9 +189,9 @@ export function BouncingText({ speed = 0.2, state }: BouncingTextProps) {
                     ref={textRef}
                     animate={controls}
                     initial={{ x: 0, y: 0 }}
-                    className={`absolute flex items-center w-auto max-w-full break-words
+                    className={`absolute flex items-center w-auto max-w-full wrap-break-word
                         ${!isMobile && colors.background}
-                        backdrop-blur-sm md:px-4 py-2 rounded-lg transition-colors duration-200 bg-opacity-80`}
+                        backdrop-blur-xs md:px-4 py-2 rounded-lg transition-colors duration-200 bg-opacity-80`}
                 >
                     <span className={`${colors.text} transition-colors duration-200`}>
                         {switcher || isMobile ?

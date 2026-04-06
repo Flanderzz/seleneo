@@ -18,9 +18,9 @@ export function TimelineStep({ icon: Icon, title, description, imageUrl, index }
         //   style={{ transitionDelay: `${index * 200}ms` }}
         >
             {index !== 0 && (
-                <div className="absolute -top-24 left-6 w-0.5 h-24 bg-gradient-to-b from-transparent via-indigo-200 dark:via-indigo-800 to-indigo-300 dark:to-indigo-700" />
+                <div className="absolute -top-24 left-6 w-0.5 h-24 bg-linear-to-b from-transparent via-indigo-200 dark:via-indigo-800 to-indigo-300 dark:to-indigo-700" />
             )}
-            <div className="relative z-10 flex-shrink-0">
+            <div className="relative z-10 shrink-0">
                 <div className="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
                     <Icon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
@@ -32,7 +32,7 @@ export function TimelineStep({ icon: Icon, title, description, imageUrl, index }
                         <p className="text-gray-600 dark:text-gray-300">{description}</p>
                     </div>
                     <div className="relative rounded-xl overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 dark:from-indigo-500/20 dark:to-purple-500/20" />
+                        <div className="absolute inset-0 bg-linear-to-br from-indigo-500/10 to-purple-500/10 dark:from-indigo-500/20 dark:to-purple-500/20" />
                         <img
                             src={imageUrl}
                             alt={title}

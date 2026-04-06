@@ -8,7 +8,7 @@ interface UseInViewOptions {
   once?: boolean;
 }
 
-export function useInView(options: UseInViewOptions = {}): [React.RefObject<HTMLElement>, boolean] {
+export function useInView(options: UseInViewOptions = {}): [React.RefObject<HTMLElement | null>, boolean] {
   const ref = useRef<HTMLElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);

@@ -69,7 +69,7 @@ export default function AddImageButton({ }: AddImageButtonProps) {
     }
 
     return (
-        <div className="mb-3 hidden h-[4rem] gap-4 px-1 text-sm md:flex">
+        <div className="mb-3 hidden h-16 gap-4 px-1 text-sm md:flex">
             <TooltipProvider delayDuration={300}>
                 <Tooltip>
                     <TooltipTrigger asChild>
